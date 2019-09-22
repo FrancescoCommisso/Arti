@@ -8,7 +8,6 @@ import "./fonts/aAutoSignature.ttf";
 import "./fonts/typewcond_bold.otf";
 import "./fonts/typewcond_demi.otf";
 import "./fonts/typewcond_regular.otf";
-import "semantic-ui-less/semantic.less";
 import "semantic-ui-css/semantic.min.css";
 
 ReactDOM.render(<App />, document.getElementById("root"));
