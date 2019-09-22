@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { Button, Modal, Icon } from "semantic-ui-react";
+import whiteIcon from "./assets/whiteIcon.png";
 
 const Transition = styled.div`
   .active {
@@ -18,33 +20,97 @@ const Bar = styled.div`
   top: 0;
   left: 0;
   margin: 0;
+  padding: 0;
   width: 100%;
   font-family: aAutoSignature;
-  background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
 `;
 
 const Title = styled.h1`
   font-size: 4em;
   text-align: center;
+  font-family: aAutoSignature;
   font-weight: 100;
   margin: 0;
-  margin-top: 50px;
+  padding-top: 50px;
   color: #ffffff;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
-const TextButton = styled.button`
+const ArtIcon = styled.img`
+  margin: 20px;
+  width: 15vw;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const NavBurger = styled(Icon)`
+  position: fixed;
+  top: 35px;
+  left: 25px;
+  color: #fff;
+  @media (min-width: 768px) {
+    visibility: hidden;
+  }
+  :hover {
+    color: #c69c6c;
+  }
+`;
+
+const NavButton = styled.button`
   font-family: typewcond;
   font-size: 2em;
   color: white;
   background-color: transparent;
   border: none;
   margin: 20px;
+  outline: none;
+  :hover {
+    color: #c69c6c;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
+
+const NavModalButton = styled.button`
+  font-family: typewcond;
+  font-size: 2em;
+  color: white;
+  background-color: transparent;
+  border: none;
+  margin: 20px;
+  outline: none;
+  :hover {
+    color: #c69c6c;
+  }
+`;
+
+const NavModal = ({ open, tabs, handleClose }) => {
+  return (
+    <Modal open={open} onClose={handleClose} basic size="small">
+      <Modal.Content style={{ text: "center" }}>
+        {tabs.map(tab => {
+          return (
+            <div style={{ text: "center" }}>
+              <NavModalButton key={tab}>{tab.toUpperCase()}</NavModalButton>
+            </div>
+          );
+        })}
+      </Modal.Content>
+    </Modal>
+  );
+};
 
 export const Nav = ({ tabs }) => {
   const [scrollPos, changeScrollPos] = useState(0);
   const [show, changeShow] = useState(true);
+  const [modal, changeModal] = useState(false);
 
   const handleScroll = () => {
     let s = scrollPos;
@@ -60,16 +126,28 @@ export const Nav = ({ tabs }) => {
     };
   }, []);
 
+  const handleBurgerClick = () => {
+    changeModal(!modal);
+    console.log("modal: ", modal);
+  };
   return (
-    <Transition>
-      <Bar className={show ? "active" : "hidden"}>
-        <Title>Artigianale</Title>
-        <div>
+    <div>
+      <Transition>
+        <Bar className={show ? "active" : "hidden"}>
+          <Title>Artigianale</Title>
+
+          <ArtIcon src={whiteIcon} />
           {tabs.map(tab => {
-            return <TextButton>{tab.toUpperCase()}</TextButton>;
+            return <NavButton key={tab}>{tab.toUpperCase()}</NavButton>;
           })}
-        </div>
-      </Bar>
-    </Transition>
+        </Bar>
+        <NavModal
+          handleClose={handleBurgerClick}
+          tabs={tabs}
+          open={modal}
+        ></NavModal>
+      </Transition>
+      <NavBurger onClick={handleBurgerClick} name="bars" size="big"></NavBurger>
+    </div>
   );
 };

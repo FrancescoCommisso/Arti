@@ -3,7 +3,7 @@ import { Page, SubTitle } from "../shared/styledComponents";
 
 export const Menu = () => {
   return (
-    <Page style={{ backgroundColor: "blue" }}>
+    <Page>
       <div className={{ marginTop: "100px" }}>
         <SubTitle>Menu</SubTitle>
       </div>
