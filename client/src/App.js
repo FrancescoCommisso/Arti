@@ -3,7 +3,7 @@ import React from "react";
 import { Nav } from "./components/Nav";
 import { Menu } from "./components/Menu";
 import { Location } from "./components/Location";
-import { Page } from "./style";
+import { Page } from "./shared/styledComponents";
 
 function App() {
   return (
