@@ -17,10 +17,8 @@ const BSpan2 = styled.span`
 const LocationTitle = styled(SubTitle)``;
 export const Location = () => {
   return (
-    <Page style={{ backgroundColor: "#c69c6c", overflow: "hidden" }}>
-      <BSpan2>
-        <LocationTitle style={{ color: "#fff" }}>Locations</LocationTitle>
-      </BSpan2>
+    <Page>
+      <LocationTitle style={{ color: "#000" }}>Locations</LocationTitle>
     </Page>
   );
 };
