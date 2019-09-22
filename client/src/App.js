@@ -10,9 +10,6 @@ function App() {
   return (
     <div>
       <Nav tabs={["menu", "social", "locations", "reservations", "contact"]} />
-      <Page></Page>
-      <Menu></Menu>
-      <Location></Location>
     </div>
   );
 }
