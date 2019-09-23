@@ -16,6 +16,7 @@ const Transition = styled.div`
 `;
 
 const Bar = styled.div`
+  z-index: 100
   position: fixed;
   top: 0;
   left: 0;
@@ -28,10 +29,10 @@ const Bar = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 4em;
+  font-size: 5em;
   text-align: center;
   font-family: aAutoSignature;
-  font-weight: 100;
+  font-weight: 100px;
   margin: 0;
   padding-top: 50px;
   color: #ffffff;
@@ -53,6 +54,7 @@ const NavBurger = styled(Icon)`
   position: fixed;
   top: 35px;
   left: 25px;
+  z-index: 100;
   color: #fff;
   @media (min-width: 768px) {
     visibility: hidden;
