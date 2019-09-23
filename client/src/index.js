@@ -9,6 +9,7 @@ import "./fonts/typewcond_bold.otf";
 import "./fonts/typewcond_demi.otf";
 import "./fonts/typewcond_regular.otf";
 import "semantic-ui-css/semantic.min.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 
