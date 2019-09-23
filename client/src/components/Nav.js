@@ -42,8 +42,8 @@ const Title = styled.h1`
 `;
 
 const ArtIcon = styled.img`
-  margin: 20px;
-  width: 15vw;
+  margin: 10px;
+  width: 10vw;
 
   @media (min-width: 768px) {
     display: none;
@@ -52,7 +52,7 @@ const ArtIcon = styled.img`
 
 const NavBurger = styled(Icon)`
   position: fixed;
-  top: 35px;
+  top: 18px;
   left: 25px;
   z-index: 100;
   color: #fff;
