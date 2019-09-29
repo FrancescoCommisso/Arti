@@ -26,8 +26,8 @@ const MenuItemTitle = styled.h3`
 const MenuItemDesc = styled.p`
   font-family: typewcond;
 `;
-console.log("accent: ", accent);
 const Item = styled.div`
+  margin: 10px;
   h3 {
     font-size: 1.6em;
   }

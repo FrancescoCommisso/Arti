@@ -33,7 +33,7 @@ const LocationGrid = styled.div`
     margin-right: 10px;
   }
   @media (${tablets}) and (orientation: portrait) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     text-align: center;
     p {
       font-size: 1.3em;
@@ -53,19 +53,32 @@ const LocationGrid = styled.div`
   }
 `;
 
+const MapDiv = styled.div`
+  height: 200px;
+  background-color: #bbb;
+  text-align: center;
+  vertical-align: baseline @media (${tablets}) {
+    margin-top: 20px;
+  }
+`;
+
 export const Location = () => {
   return (
     <Wrapper>
-      <SubTitle>Location</SubTitle>
+      <SubTitle>Find Us</SubTitle>
       <LocationGrid>
-        <div style={{}}>
-          <h2 style={{ fontFamily: "typewcond" }}>ISLINGTON & RUTHERFORD</h2>
+        <div style={{ color: "#c69c6c" }}>
+          <h2 style={{ fontFamily: "typewcond", color: "" }}>
+            ISLINGTON & RUTHERFORD
+          </h2>
           <h3 style={{ fontFamily: "typewcond" }}>
             {"5100 Rutherford Road, Woodbridge On L4H 2J2".toUpperCase()}
           </h3>
+          <Hours style={{ textAlign: "left", color: "black" }}></Hours>
         </div>
-
-        <Hours style={{ textAlign: "right" }}></Hours>
+        <MapDiv>
+          <p>This is going to be a map</p>{" "}
+        </MapDiv>
       </LocationGrid>
     </Wrapper>
   );
