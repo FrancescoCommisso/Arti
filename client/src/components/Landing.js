@@ -12,7 +12,6 @@ const photos = [p1, p2, p3, p4];
 
 const Carousel1 = styled(Carousel)`
   width: 100%;
-  background-color: #f00;
 `;
 
 export const Landing = () => {

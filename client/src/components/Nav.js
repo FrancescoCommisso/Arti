@@ -32,7 +32,7 @@ const Title = styled.h1`
   font-size: 5em;
   text-align: center;
   font-family: aAutoSignature;
-  font-weight: 100px;
+  font-weight: 100;
   margin: 0;
   padding-top: 50px;
   color: #ffffff;
@@ -55,7 +55,7 @@ const NavBurger = styled(Icon)`
   top: 18px;
   left: 25px;
   z-index: 100;
-  color: #fff;
+  color: ${({ color }) => color};
   @media (min-width: 768px) {
     visibility: hidden;
   }
@@ -149,7 +149,12 @@ export const Nav = ({ tabs }) => {
           open={modal}
         ></NavModal>
       </Transition>
-      <NavBurger onClick={handleBurgerClick} name="bars" size="big"></NavBurger>
+      <NavBurger
+        color={show ? "white" : "black"}
+        onClick={handleBurgerClick}
+        name="bars"
+        size="big"
+      ></NavBurger>
     </div>
   );
 };
