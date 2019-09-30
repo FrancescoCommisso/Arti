@@ -31,8 +31,9 @@ export const Page = styled.div`
 export const SubTitle = styled.h1`
   font-family: aAutoSignature;
   font-size: 3em;
-  text-align: left;
+  text-align: center;
   font-weight: 1;
+  margin: 40px;
   @media (${tablets}) {
     font-size: 3em;
   }
@@ -46,8 +47,21 @@ export const SubTitle = styled.h1`
 `;
 
 export const Wrapper = styled.div`
-  margin: 70px;
+  margin: 90px;
+  @media (${tablets}) {
+    margin: 70px;
+    text-align: center;
+    margin: 40px;
+  }
   @media (${phones}) {
+    margin: 70px;
+
+    text-align: center;
+    margin: 40px;
+  }
+  @media (${smallPhones}) {
+    margin: 70px;
+
     text-align: center;
     margin: 40px;
   }

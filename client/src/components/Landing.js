@@ -2,39 +2,78 @@ import React, { Component } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styled from "styled-components";
-import { phones, tablets, smallPhones } from "../shared/styledComponents";
-import p1 from "./assets/photos/fulltable.jpg";
-import p2 from "./assets/photos/saladplate.png";
-import p3 from "./assets/photos/musclebowl.png";
-import p4 from "./assets/photos/cheeseboard.png";
+import {
+  phones,
+  tablets,
+  smallPhones,
+  accent
+} from "../shared/styledComponents";
+import p1 from "./assets/photos2/cheeseboard.jpg";
+import p2 from "./assets/photos2/gnocchi.jpg";
+import p3 from "./assets/photos2/gnocchi2.jpg";
+import p4 from "./assets/photos2/muscleplate.jpg";
+import p5 from "./assets/photos2/meatknife.jpg";
+import p6 from "./assets/photos2/saladplate.jpg";
+import p7 from "./assets/photos2/sidepasta.jpg";
+// import p8 from "./assets/photos2/warmsalad.jpg";
 
-const photos = [p1, p2, p3, p4];
+const photos = [p1, p2, p3, p4, p5, p6, p7];
 
-const Carousel1 = styled(Carousel)`
-  width: 100%;
+const StyledCarousel = styled(Carousel)`
+  max-height: 95vh;
+  div {
+    img {
+      overflow: hidden;
+    }
+  }
+  height: 1000px;
+
+  overflow: hidden;
+  @media (${tablets}) {
+    height: auto;
+    div {
+      img {
+        height: auto;
+      }
+    }
+  }
+  @media (${phones}) {
+    height: auto;
+  }
+  @media (${smallPhones}) {
+    height: auto;
+  }
 `;
 
 const LandingDiv = styled.div`
-  font-family: aAutoSignature;
-
-  background-color: #000;
+  h1,
+  h2,
+  h3 {
+    font-family: typewcond;
+  }
+  background-color: ${accent};
   text-align: center;
-  padding: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
   color: #fff;
+  font-weight: 100;
+  max-height: 5vh;
 
   @media (${tablets}) {
   }
   @media (${phones}) {
   }
   @media (${smallPhones}) {
-    font-size: 50em;
+    h1 {
+      font-size: 1em;
+    }
   }
 `;
 
 export const Landing = () => {
   return (
     <div style={{ zIndex: -1 }}>
-      <Carousel1
+      <StyledCarousel
         infiniteLoop={true}
         interval={5000}
         transitionTime={1000}
@@ -44,14 +83,14 @@ export const Landing = () => {
       >
         {photos.map(p => {
           return (
-            <div>
+            <div styled={{ backgroundColor: "#0f0" }}>
               <img src={p}></img>
             </div>
           );
         })}
-      </Carousel1>
+      </StyledCarousel>
       <LandingDiv>
-        <h1 style={{ fontFamily: "aAutoSignature" }}> (905) 893 2774</h1>
+        <h3>Full Site Coming Soon</h3>
       </LandingDiv>
     </div>
   );

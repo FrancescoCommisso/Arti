@@ -18,7 +18,7 @@ function App() {
       <Landing style={{ zIndex: "-1" }}></Landing>
       <Menu></Menu>
       <Location></Location>
-      <Contact></Contact>
+      {/* <Contact></Contact> */}
       <Social></Social>
       <Footer></Footer>
     </div>

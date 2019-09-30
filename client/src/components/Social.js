@@ -1,5 +1,18 @@
 import React from "react";
 import { SubTitle, Wrapper } from "../shared/styledComponents";
+import Styled from "styled-components";
+import { Icon } from "semantic-ui-react";
+
+const SocialIcon = Styled(Icon)`
+
+  &&{
+ 
+    background-color: green;
+  }
+ 
+  color: #fff;
+ 
+`;
 
 export const Social = () => {
   return (
@@ -7,13 +20,16 @@ export const Social = () => {
       <SubTitle>Social</SubTitle>
       <div
         style={{
-          textAlign: "left",
+          textAlign: "center",
           fontFamily: "typewcond",
           maxWidth: "600px",
-          margin: "auto",
-          backgroundColor: "#f00"
+          margin: "auto"
         }}
-      ></div>
+      >
+        <Icon style={{ margin: "20px" }} className="instagram big "></Icon>
+        <Icon style={{ margin: "20px" }} className="twitter big "></Icon>
+        <Icon style={{ margin: "20px" }} className="facebook big "></Icon>
+      </div>
     </Wrapper>
   );
 };
