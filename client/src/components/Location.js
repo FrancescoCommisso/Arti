@@ -87,7 +87,7 @@ export const Location = () => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper id="find-us">
       <SubTitle>Find Us</SubTitle>
       <LocationGrid>
         <div>

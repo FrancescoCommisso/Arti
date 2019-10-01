@@ -16,7 +16,7 @@ const SocialIcon = Styled(Icon)`
 
 export const Social = () => {
   return (
-    <Wrapper>
+    <Wrapper id="social">
       <SubTitle>Social</SubTitle>
       <div
         style={{

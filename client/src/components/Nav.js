@@ -97,19 +97,30 @@ const NavModal = ({ open, tabs, handleClose }) => {
   return (
     <Modal open={open} onClose={handleClose} basic size="small">
       <Modal.Content style={{ text: "center" }}>
-        {tabs.map(tab => {
-          return (
-            <div style={{ text: "center" }}>
-              <NavModalButton key={tab}>{tab.toUpperCase()}</NavModalButton>
-            </div>
-          );
-        })}
+        <div>
+          {tabs.map((tab, i) => {
+            console.log("tab: ", tab);
+            console.log("index: ", tab);
+
+            return (
+              <div style={{ margin: "25px" }} key={i}>
+                {tab}
+              </div>
+            );
+          })}
+        </div>
       </Modal.Content>
     </Modal>
   );
 };
 
-export const Nav = ({ tabs }) => {
+const DropNav = styled.div`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const Nav = ({ children }) => {
   const [scrollPos, changeScrollPos] = useState(0);
   const [show, changeShow] = useState(true);
   const [modal, changeModal] = useState(false);
@@ -130,7 +141,6 @@ export const Nav = ({ tabs }) => {
 
   const handleBurgerClick = () => {
     changeModal(!modal);
-    console.log("modal: ", modal);
   };
   return (
     <div>
@@ -138,14 +148,17 @@ export const Nav = ({ tabs }) => {
         <Bar className={show ? "active" : "hidden"}>
           <Title>Artigianale</Title>
 
+          <DropNav style={{ margin: "20px" }}>
+            {children.map(c => {
+              return c;
+            })}
+          </DropNav>
+
           <ArtIcon src={whiteIcon} />
-          {tabs.map(tab => {
-            return <NavButton key={tab}>{tab.toUpperCase()}</NavButton>;
-          })}
         </Bar>
         <NavModal
           handleClose={handleBurgerClick}
-          tabs={tabs}
+          tabs={children}
           open={modal}
         ></NavModal>
       </Transition>

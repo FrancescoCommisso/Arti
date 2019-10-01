@@ -204,7 +204,7 @@ const MenuItem = ({ item, align }) => {
 
 export const Menu = () => {
   return (
-    <Wrapper>
+    <Wrapper id="menu" href="/menu">
       <SubTitle>Menu</SubTitle>
       <StyledTab>
         <Tab
@@ -212,9 +212,7 @@ export const Menu = () => {
           style={{ border: "none" }}
           menu={{ borderless: true, attached: false, tabular: false }}
           panes={panes}
-        >
-          <h1>fuck</h1>
-        </Tab>
+        ></Tab>
       </StyledTab>
     </Wrapper>
   );

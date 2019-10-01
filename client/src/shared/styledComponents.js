@@ -47,6 +47,7 @@ export const SubTitle = styled.h1`
 `;
 
 export const Wrapper = styled.div`
+  min-height: 100vh;
   margin: 90px;
   @media (${tablets}) {
     margin: 70px;
