@@ -34,15 +34,19 @@ export const SubTitle = styled.h1`
   text-align: center;
   font-weight: 1;
   margin: 40px;
+  margin-bottom: 70px;
   @media (${tablets}) {
     font-size: 3em;
+    margin-bottom: 20px;
   }
   @media (${phones}) {
     font-size: 3em;
     text-align: center;
+    margin-bottom: 20px;
   }
   @media (${smallPhones}) {
     font-size: 3em;
+    margin-bottom: 20px;
   }
 `;
 
@@ -57,7 +61,7 @@ export const Frame = styled.div`
 export const Wrapper = styled.div`
   margin: 90px;
   overflow: auto;
-  width: 90vw;
+  width: 70vw;
   @media (${tablets}) {
     margin: 70px;
     text-align: center;
