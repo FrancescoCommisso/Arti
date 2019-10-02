@@ -4,7 +4,8 @@ import {
   tablets,
   phones,
   smallPhones,
-  accent
+  accent,
+  Frame
 } from "../shared/styledComponents";
 import { GoogleMap, Marker } from "react-google-maps";
 import { SubTitle, Wrapper } from "../shared/styledComponents";
@@ -12,14 +13,9 @@ import { SubTitle, Wrapper } from "../shared/styledComponents";
 const Hours = ({ style }) => {
   return (
     <div style={style}>
-      <p>
-        Sunday: 12pm - 10pm
-        <br />
-        Monday - Thursday: 10am - 10pm
-        <br />
-        Friday - Saturday: 11am - 1am
-        <br />
-      </p>
+      <p>Sunday: 12pm - 10pm</p>
+      <p>Monday - Thursday: 10am - 10pm</p>
+      <p>Friday - Saturday: 11am - 1am</p>
     </div>
   );
 };
@@ -87,28 +83,32 @@ export const Location = () => {
   };
 
   return (
-    <Wrapper id="find-us">
-      <SubTitle>Find Us</SubTitle>
-      <LocationGrid>
-        <div>
-          <h1>CONTACT </h1>
-          <p>(905) 893 2774</p>
-          <p>info@artiristorante.com</p>
-          <h1>HOURS </h1>
-          <Hours style={{ textAlign: "left", color: "black" }}></Hours>
-          <h1>LOCATION</h1>
-          <p>Islington & Rutherford</p>
-          <p>{"5100 Rutherford Road, Woodbridge On L4H 2J2"}</p>
-        </div>
+    <Frame id="find-us">
+      <Wrapper>
+        <SubTitle>Find Us</SubTitle>
+        <LocationGrid>
+          <div>
+            <h1>CONTACT </h1>
+            <p>(905) 893 2774</p>
+            <p>info@artiristorante.com</p>
+            <h1>HOURS </h1>
+            <Hours style={{ textAlign: "left", color: "black" }}></Hours>
+            <h1>LOCATION</h1>
+            <p>Islington & Rutherford</p>
+            <p>5100 Rutherford Road</p>
+            <p> Woodbridge On,</p>
+            <p>L4H 2J2</p>
+          </div>
 
-        <MapDiv>
-          {/* <GoogleMap
+          <MapDiv>
+            {/* <GoogleMap
             defaultZoom={8}
             defaultCenter={{ lat: -34.397, lng: 150.644 }}
           ></GoogleMap> */}
-        </MapDiv>
-      </LocationGrid>
-    </Wrapper>
+          </MapDiv>
+        </LocationGrid>
+      </Wrapper>
+    </Frame>
   );
 };
 

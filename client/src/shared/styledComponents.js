@@ -46,9 +46,18 @@ export const SubTitle = styled.h1`
   }
 `;
 
-export const Wrapper = styled.div`
+export const Frame = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
   min-height: 100vh;
+`;
+
+export const Wrapper = styled.div`
   margin: 90px;
+  overflow: auto;
+  width: 90vw;
   @media (${tablets}) {
     margin: 70px;
     text-align: center;
@@ -56,13 +65,11 @@ export const Wrapper = styled.div`
   }
   @media (${phones}) {
     margin: 70px;
-
     text-align: center;
     margin: 40px;
   }
   @media (${smallPhones}) {
     margin: 70px;
-
     text-align: center;
     margin: 40px;
   }

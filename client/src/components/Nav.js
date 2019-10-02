@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Button, Modal, Icon } from "semantic-ui-react";
+import { Modal, Icon } from "semantic-ui-react";
 import whiteIcon from "./assets/whiteIcon.png";
 
 const Transition = styled.div`
@@ -64,47 +64,15 @@ const NavBurger = styled(Icon)`
   }
 `;
 
-const NavButton = styled.button`
-  font-family: typewcond;
-  font-size: 2em;
-  color: white;
-  background-color: transparent;
-  border: none;
-  margin: 20px;
-  outline: none;
-  :hover {
-    color: #c69c6c;
-  }
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
-
-const NavModalButton = styled.button`
-  font-family: typewcond;
-  font-size: 2em;
-  color: white;
-  background-color: transparent;
-  border: none;
-  margin: 20px;
-  outline: none;
-  :hover {
-    color: #c69c6c;
-  }
-`;
-
 const NavModal = ({ open, tabs, handleClose }) => {
   return (
     <Modal open={open} onClose={handleClose} basic size="small">
       <Modal.Content style={{ text: "center" }}>
         <div>
           {tabs.map((tab, i) => {
-            console.log("tab: ", tab);
-            console.log("index: ", tab);
-
             return (
               <div style={{ margin: "25px" }} key={i}>
-                {tab}
+                <span onClick={handleClose}>{tab}</span>
               </div>
             );
           })}

@@ -6,7 +6,8 @@ import {
   smallPhones,
   phones,
   tablets,
-  accent
+  accent,
+  Frame
 } from "../shared/styledComponents";
 import {
   antipasto,
@@ -52,12 +53,13 @@ const Item = styled.div`
 
 const MenuGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
+  text-align: center;
 
   @media (${tablets}) and (orientation: portrait) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     text-align: center;
   }
   @media (${phones}) and (orientation: portrait) {
@@ -195,7 +197,7 @@ const StyledTab = styled.div`
 `;
 const MenuItem = ({ item, align }) => {
   return (
-    <Item align={align}>
+    <Item align={"align"}>
       <MenuItemTitle>{item.title}</MenuItemTitle>
       <MenuItemDesc>{item.desc}</MenuItemDesc>
     </Item>
@@ -204,16 +206,23 @@ const MenuItem = ({ item, align }) => {
 
 export const Menu = () => {
   return (
-    <Wrapper id="menu" href="/menu">
-      <SubTitle>Menu</SubTitle>
-      <StyledTab>
-        <Tab
-          grid={{ paneWidth: 12, tabWidth: 4 }}
-          style={{ border: "none" }}
-          menu={{ borderless: true, attached: false, tabular: false }}
-          panes={panes}
-        ></Tab>
-      </StyledTab>
-    </Wrapper>
+    <Frame id="menu" href="/menu">
+      <Wrapper>
+        <SubTitle>Menu</SubTitle>
+        <StyledTab>
+          <Tab
+            grid={{ paneWidth: 12, tabWidth: 4 }}
+            style={{ border: "none" }}
+            menu={{
+              borderless: true,
+              attached: false,
+              tabular: false,
+              fluid: true
+            }}
+            panes={panes}
+          ></Tab>
+        </StyledTab>
+      </Wrapper>
+    </Frame>
   );
 };
