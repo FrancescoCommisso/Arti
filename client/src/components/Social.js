@@ -27,9 +27,12 @@ export const Social = () => {
             margin: "auto"
           }}
         >
-          <Icon style={{ margin: "20px" }} className="instagram big "></Icon>
-          <Icon style={{ margin: "20px" }} className="twitter big "></Icon>
-          <Icon style={{ margin: "20px" }} className="facebook big "></Icon>
+          <a href="https://www.instagram.com/arti.ristorante">
+            <Icon
+              style={{ margin: "20px" }}
+              className="instagram huge black"
+            ></Icon>
+          </a>
         </div>
       </Wrapper>
     </Frame>

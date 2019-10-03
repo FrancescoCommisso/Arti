@@ -9,6 +9,7 @@ import { Footer } from "./components/Footer";
 import { BrowserRouter } from "react-router-dom";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import Styled from "styled-components";
+import { FindUs } from "./components/FindUs";
 
 const StyledLink = Styled(NavLink)`
   font-family: typewcond;
@@ -56,7 +57,7 @@ function App() {
 
       <Landing style={{ zIndex: "-1" }}></Landing>
       <Menu></Menu>
-      <Location></Location>
+      <FindUs></FindUs>
       <Social></Social>
       <Footer></Footer>
     </BrowserRouter>

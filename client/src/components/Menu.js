@@ -56,7 +56,7 @@ const MenuGrid = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
-  text-align: center;
+  text-align: left;
 
   @media (${tablets}) and (orientation: portrait) {
     grid-template-columns: repeat(1, 1fr);
@@ -152,7 +152,6 @@ const panes = [
     menuItem: "Secondi",
     render: () => (
       <Tab.Pane attached={false}>
-        {" "}
         <MenuGrid>
           {secondi.map((item, i) => {
             return (
@@ -209,6 +208,7 @@ export const Menu = () => {
     <Frame id="menu" href="/menu">
       <Wrapper>
         <SubTitle>Menu</SubTitle>
+
         <StyledTab>
           <Tab
             grid={{ paneWidth: 12, tabWidth: 4 }}
