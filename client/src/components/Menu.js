@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import {
   SubTitle,
@@ -17,7 +17,7 @@ import {
   secondi,
   insalata
 } from "./assets/menu";
-import { Tab } from "semantic-ui-react";
+import { Tab, Dimmer, Segment, Header } from "semantic-ui-react";
 
 const MenuItemTitle = styled.h3`
   font-family: typewcond;
@@ -194,12 +194,48 @@ const StyledTab = styled.div`
     font-size: 1.2em !important;
   }
 `;
+
+const DimDiv = styled.div`
+  border-radius: 3px;
+
+  @media (${tablets}) {
+    text-align: center;
+    font-size: 1em;
+  }
+  @media (${phones}) {
+    text-align: center;
+    font-size: 1em;
+  }
+  @media (${smallPhones}) {
+    text-align: center;
+    font-size: 0.8em;
+  }
+`;
 const MenuItem = ({ item, align }) => {
+  const [blurred, setBlurred] = useState(!item.active);
+
   return (
-    <Item align={"align"}>
-      <MenuItemTitle>{item.title}</MenuItemTitle>
-      <MenuItemDesc>{item.desc}</MenuItemDesc>
-    </Item>
+    <Dimmer.Dimmable as={DimDiv} dimmed={blurred}>
+      <Item
+        align={"align"}
+        onClick={() => {
+          if (!item.active) setBlurred(!blurred);
+        }}
+      >
+        <MenuItemTitle>{item.title}</MenuItemTitle>
+        <div>
+          <Dimmer active={blurred}>
+            <h3 style={{ fontFamily: "typewcond" }}>
+              This item isn't available during our soft opening
+            </h3>
+            <p style={{ fontFamily: "typewcond" }}>
+              (Click here to see it anyways)
+            </p>
+          </Dimmer>
+          <MenuItemDesc>{item.desc}</MenuItemDesc>
+        </div>
+      </Item>
+    </Dimmer.Dimmable>
   );
 };
 

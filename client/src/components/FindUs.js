@@ -14,7 +14,7 @@ import AccentIcon from "./assets/AccentIcon.png";
 
 const MapDiv = styled.div`
   background-color: #bbb;
-  border-radius: 10px;
+  border-radius: 4px;
   text-align: center;
   min-height: 400px;
   overflow: hidden;
@@ -102,13 +102,10 @@ export const FindUs = () => {
               <p>5100 Rutherford Road</p>
               <p>Woodbridge, Ontario </p>
               <p>L4H 2J2</p>
-              <p style={{ visibility: "hidden" }}>
-                Email: info@artiristorante.com
-              </p>
             </div>
 
             <div style={{ margin: "auto" }}>
-              <h1>HOURS</h1>
+              <h1 style={{ marginTop: "30px" }}>HOURS</h1>
               <p>Sunday: 12pm - 10pm</p>
               <p>Monday - Thursday: 10am - 10pm</p>
               <p>Friday - Saturday: 11am - 1am</p>

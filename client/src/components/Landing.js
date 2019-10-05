@@ -117,7 +117,7 @@ export const Landing = () => {
         })}
       </StyledCarousel>
       <Banner>
-        <h1>Come join us during soft opening</h1>
+        <h1>Come join us during our soft opening</h1>
       </Banner>
     </div>
   );

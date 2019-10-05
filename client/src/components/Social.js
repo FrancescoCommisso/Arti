@@ -24,6 +24,7 @@ export const Social = () => {
             textAlign: "center",
             fontFamily: "typewcond",
             maxWidth: "600px",
+            overflow: "hidden",
             margin: "auto"
           }}
         >
@@ -33,6 +34,7 @@ export const Social = () => {
               className="instagram huge black"
             ></Icon>
           </a>
+          <h3 style={{ fontFamily: "typewcond" }}>@Arti.Ristorante</h3>
         </div>
       </Wrapper>
     </Frame>

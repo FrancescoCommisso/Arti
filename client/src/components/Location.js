@@ -56,7 +56,6 @@ const LocationGrid = styled.div`
 
 const MapDiv = styled.div`
   background-color: #bbb;
-  border-radius: 10px;
   text-align: center;
   height: 100%;
   overflow: hidden;
