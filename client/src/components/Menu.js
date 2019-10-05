@@ -81,7 +81,7 @@ const panes = [
           {antipasto.map((item, i) => {
             return (
               <MenuItem
-                key={i}
+                key={i + "ant"}
                 align={i % 2 == 0 ? "left" : "right"}
                 item={item}
               ></MenuItem>
@@ -100,7 +100,7 @@ const panes = [
           {insalata.map((item, i) => {
             return (
               <MenuItem
-                key={i}
+                key={i + "ins"}
                 align={i % 2 == 0 ? "left" : "right"}
                 item={item}
               ></MenuItem>
@@ -119,7 +119,7 @@ const panes = [
           {pasta.map((item, i) => {
             return (
               <MenuItem
-                key={i}
+                key={i + "pas"}
                 align={i % 2 == 0 ? "left" : "right"}
                 item={item}
               ></MenuItem>
@@ -138,7 +138,7 @@ const panes = [
           {pizza.map((item, i) => {
             return (
               <MenuItem
-                key={i}
+                key={i + "piz"}
                 align={i % 2 == 0 ? "left" : "right"}
                 item={item}
               ></MenuItem>
@@ -156,7 +156,7 @@ const panes = [
           {secondi.map((item, i) => {
             return (
               <MenuItem
-                key={i}
+                key={i + "sec"}
                 align={i % 2 == 0 ? "left" : "right"}
                 item={item}
               ></MenuItem>
