@@ -107,9 +107,9 @@ export const FindUs = () => {
 
             <div style={{ margin: "auto" }}>
               <h1 style={{ marginTop: "30px" }}>HOURS</h1>
-              <p>Sunday: 12pm - 10pm</p>
-              <p>Monday - Thursday: 10am - 10pm</p>
-              <p>Friday - Saturday: 11am - 1am</p>
+              <p>Monday - Thursday: 12pm - 3pm, 5pm - 10pm</p>
+              <p>Friday - Saturday: 12pm - 3pm, 5am - 11pm</p>
+              <p>Sunday: Private Events</p>
             </div>
 
             <div style={{ margin: "auto" }}>
