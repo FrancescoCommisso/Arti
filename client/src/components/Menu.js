@@ -19,6 +19,25 @@ import {
 } from "./assets/menu";
 import { Tab, Dimmer, Segment, Header } from "semantic-ui-react";
 
+antipasto.sort((a, b) => {
+  return b.active - a.active;
+});
+pizza.sort((a, b) => {
+  return b.active - a.active;
+});
+pasta.sort((a, b) => {
+  return b.active - a.active;
+});
+Contorni.sort((a, b) => {
+  return b.active - a.active;
+});
+secondi.sort((a, b) => {
+  return b.active - a.active;
+});
+insalata.sort((a, b) => {
+  return b.active - a.active;
+});
+
 const MenuItemTitle = styled.h3`
   font-family: typewcond;
   color: ${accent};
@@ -196,7 +215,7 @@ const StyledTab = styled.div`
 `;
 
 const DimDiv = styled.div`
-  border-radius: 3px;
+  border-radius: 10px;
 
   @media (${tablets}) {
     text-align: center;
