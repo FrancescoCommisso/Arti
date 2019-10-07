@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styled from "styled-components";
@@ -17,9 +17,12 @@ import p6 from "./assets/photosMin2/saladplate.jpg";
 import p7 from "./assets/photosMin2/sidepasta.jpg";
 // import p8 from "./assets/photos2/warmsalad.jpg";
 
+import { Placeholder } from "semantic-ui-react";
+
 const photos = [p1, p2, p3, p4, p5, p6, p7];
 
 const StyledCarousel = styled(Carousel)`
+display: ${({ hide }) => hide}
   max-height: 95vh;
   div {
     img {
@@ -97,7 +100,31 @@ const Banner = styled.div`
   }
 `;
 
+const CarouselImage = ({ image, key, loaded }) => {
+  useEffect(() => {
+    console.log("yoooo");
+    loaded();
+  }, []);
+  return (
+    <div key={key}>
+      <img src={image}></img>
+    </div>
+  );
+};
+
 export const Landing = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    console.log("parent did mount ");
+    return () => {};
+  }, []);
+
+  const imagesLoaded = () => {
+    console.log("images loaded");
+    setLoading(false);
+  };
+
   return (
     <div style={{ zIndex: -1 }}>
       <StyledCarousel
@@ -107,12 +134,16 @@ export const Landing = () => {
         autoPlay={true}
         showThumbs={false}
         showStatus={false}
+        hide={loading ? "none" : "block"}
       >
-        {photos.map(p => {
+        {photos.map((p, k) => {
           return (
-            <div styled={{ backgroundColor: "#0f0" }}>
-              <img src={p}></img>
-            </div>
+            <CarouselImage
+              key={k}
+              image={p}
+              loaded={imagesLoaded}
+              styled={{ backgroundColor: "#0f0" }}
+            ></CarouselImage>
           );
         })}
       </StyledCarousel>

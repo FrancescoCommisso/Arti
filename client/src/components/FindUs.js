@@ -19,6 +19,7 @@ const MapDiv = styled.div`
   min-height: 400px;
   overflow: hidden;
   @media (${tablets}) {
+    margin-top: 20px;
     height: 400ox;
     width: 100%;
   }
@@ -34,7 +35,7 @@ const MapDiv = styled.div`
 
 const FindUsGrid = styled.div`
   display: grid;
-  grid-template-columns: 400px auto;
+  grid-template-columns: auto 600px;
 
   h1 {
     color: ${accent};
@@ -48,15 +49,15 @@ const FindUsGrid = styled.div`
     text-align: left;
   }
   @media (${tablets}) and (orientation: portrait) {
-    grid-template-columns: 400px auto;
+    grid-template-columns: auto;
     h1 {
-      text-align: left;
+      text-align: center;
     }
     p {
       font-size: 1.3em;
 
       pxmargin-right: 10px;
-      text-align: left;
+      text-align: center;
     }
   }
   @media (${phones}) and (orientation: portrait) {

@@ -225,9 +225,9 @@ const MenuItem = ({ item, align }) => {
         <MenuItemTitle>{item.title}</MenuItemTitle>
         <div>
           <Dimmer active={blurred}>
-            <h3 style={{ fontFamily: "typewcond" }}>
+            <p style={{ fontFamily: "typewcond" }}>
               This item isn't available during our soft opening
-            </h3>
+            </p>
             <p style={{ fontFamily: "typewcond" }}>
               (Click here to see it anyways)
             </p>
