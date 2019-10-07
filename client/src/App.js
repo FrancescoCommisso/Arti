@@ -10,6 +10,7 @@ import { BrowserRouter } from "react-router-dom";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 import Styled from "styled-components";
 import { FindUs } from "./components/FindUs";
+import { Helmet } from "react-helmet";
 
 const StyledLink = Styled(NavLink)`
   font-family: typewcond;
@@ -28,6 +29,17 @@ const StyledLink = Styled(NavLink)`
 function App() {
   return (
     <BrowserRouter>
+      <Helmet>
+        <title>Artigianale Ristorante & Enotoca</title>
+        <meta
+          name="description"
+          content="Traditional italian restaurante Woodbridge Ontario"
+        />
+        <meta
+          name="keywords"
+          content="italian, traditional,vaughan,artigianale,wine,winery,enoteca,pizza, pasta, steak"
+        />
+      </Helmet>
       <Nav tabs={["menu", "location", "contact", "social"]}>
         <StyledLink
           to="#menu"
