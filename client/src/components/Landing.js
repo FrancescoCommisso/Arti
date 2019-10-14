@@ -104,7 +104,6 @@ const Banner = styled.div`
 
 const CarouselImage = ({ image, key, loaded }) => {
   useEffect(() => {
-    console.log("yoooo");
     loaded();
   }, []);
   return (
@@ -118,12 +117,10 @@ export const Landing = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log("parent did mount ");
     return () => {};
   }, []);
 
   const imagesLoaded = () => {
-    console.log("images loaded");
     setLoading(false);
   };
 

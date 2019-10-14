@@ -16,6 +16,7 @@ import {
 } from "../shared/styledComponents";
 import styled from "styled-components";
 import { email, phone, hours } from "../shared/restaurantInfo";
+import { Icon } from "semantic-ui-react";
 
 const HoursGrid = styled.div`
   margin-top: 0px;
@@ -36,7 +37,7 @@ const HoursGrid = styled.div`
   }
 `;
 
-const AccentDiv = styled.div`
+export const AccentDiv = styled.div`
   display: flex;
   flex-flow: row wrap;
   font-family: typewcond;

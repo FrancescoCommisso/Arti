@@ -80,7 +80,6 @@ function App() {
       <Hours></Hours>
       <Menu></Menu>
       <FindUs></FindUs>
-      {/* <Reservations></Reservations> */}
       <Social></Social>
       <Footer></Footer>
     </BrowserRouter>

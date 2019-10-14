@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { mapOptions, InfoItem } from "../shared/styledComponents";
+import { mapOptions, InfoItem, HalfOrNada } from "../shared/styledComponents";
 import {
   tablets,
   phones,
@@ -11,7 +11,8 @@ import {
 import GoogleMapReact from "google-map-react";
 import { SubTitle, Wrapper } from "../shared/styledComponents";
 import AccentIcon from "./assets/AccentIcon.png";
-import { Divider } from "semantic-ui-react";
+import { Divider, Card } from "semantic-ui-react";
+import { AccentDiv } from "./Hours";
 
 const MapDiv = styled.div`
   border-radius: 4px;
@@ -110,7 +111,7 @@ export const FindUs = () => {
     <Frame id="find-us">
       <Wrapper>
         <SubTitle>Find Us</SubTitle>
-        <FindUsGrid>
+        <HalfOrNada>
           <ContentDiv>
             <InfoItem
               title={"Location"}
@@ -142,7 +143,7 @@ export const FindUs = () => {
               </span>
             </GoogleMapReact>
           </MapDiv>
-        </FindUsGrid>
+        </HalfOrNada>
       </Wrapper>
     </Frame>
   );

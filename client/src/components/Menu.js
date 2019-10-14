@@ -40,6 +40,7 @@ insalata.sort((a, b) => {
 
 const MenuItemTitle = styled.h3`
   font-family: typewcond;
+  font-weight: 100;
   color: ${accent};
 `;
 
