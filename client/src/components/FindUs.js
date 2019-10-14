@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { mapOptions } from "../shared/styledComponents";
+import { mapOptions, InfoItem } from "../shared/styledComponents";
 import {
   tablets,
   phones,
@@ -112,19 +112,17 @@ export const FindUs = () => {
         <SubTitle>Find Us</SubTitle>
         <FindUsGrid>
           <ContentDiv>
-            <div
-              style={{
-                margin: "auto",
-                textAlign: "left",
-                flexBasis: "100%"
-              }}
-            >
-              <h1 style={{ fontWeight: "100" }}>Location</h1>
-              <Divider></Divider>
-              <p>5100 Rutherford Road</p>
-              <p>Woodbridge, Ontario </p>
-              <p>L4H 2J2</p>
-            </div>
+            <InfoItem
+              title={"Location"}
+              align={"left"}
+              info={
+                <div>
+                  <p>5100 Rutherford Road</p>
+                  <p>Woodbridge, Ontario </p>
+                  <p>L4H 2J2</p>
+                </div>
+              }
+            ></InfoItem>
           </ContentDiv>
 
           <MapDiv>

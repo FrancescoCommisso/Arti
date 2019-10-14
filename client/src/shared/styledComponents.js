@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import React from "react";
 
 export const smallPhones = "max-width: 361px";
 
@@ -9,7 +10,8 @@ export const background = "#191919";
 export let accent = "#c69c6c";
 export const lightAccent = "#FFCB8F";
 
-export const textColor = "#fff";
+export const lightTextColor = "#fff";
+export const darkTextColor = "#000";
 export const subTitleColor = "#000";
 
 export const Title = styled.h1`
@@ -46,6 +48,16 @@ export const SubTitle = styled.h1`
   }
 `;
 
+export const HalfOrNada = styled.div`
+  list-style: none;
+
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-between;
+`;
+
 export const Frame = styled.div`
   display: flex;
   justify-content: center;
@@ -76,6 +88,56 @@ export const Wrapper = styled.div`
     width: 85vw;
   }
 `;
+
+const HoursCard = styled.div`
+  font-family: typewcond;
+  margin: auto;
+  flex-basis: 100%;
+
+  &&& {
+    padding-bottom: 40px;
+    h2 {
+      color: ${({ secondary }) => (secondary ? "white" : accent)};
+      padding-right: ${({ align }) => (align === "left" ? "70px" : "0px")};
+      padding-left: ${({ align }) => (align === "right" ? "70px" : "0px")};
+      padding-bottom: 5px;
+      font-weight: 200;
+      font-family: typewcond;
+      @media (${tablets}) {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      @media (${tablets}) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+    p {
+      font-size: 1.3rem;
+    }
+  }
+`;
+
+export const InfoItem = ({ title, info, secondary, align }) => {
+  return (
+    <HoursCard align={align} secondary={secondary}>
+      <div style={{ marginBottom: "20px" }}>
+        <h2
+          style={{
+            borderBottom: "solid 1px",
+            display: "inline",
+
+            borderColor: "rgba(0, 0, 0, 0.2)"
+          }}
+        >
+          {title}
+        </h2>
+      </div>
+
+      {info}
+    </HoursCard>
+  );
+};
 
 export const mapOptions = {
   styles: [
