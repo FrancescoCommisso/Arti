@@ -11,32 +11,55 @@ import {
 import GoogleMapReact from "google-map-react";
 import { SubTitle, Wrapper } from "../shared/styledComponents";
 import AccentIcon from "./assets/AccentIcon.png";
+import { Divider } from "semantic-ui-react";
 
 const MapDiv = styled.div`
-  background-color: #bbb;
+  border-radius: 4px;
+  background-color: red;
+  text-align: center;
+  height: 400px;
+  width: 800px;
+  overflow: hidden;
+  @media (${tablets}) and (orientation: portrait) {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  @media (${phones}) and (orientation: portrait) {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+  }
+`;
+
+const ContentDiv = styled.div`
   border-radius: 4px;
   text-align: center;
-  min-height: 400px;
   overflow: hidden;
-  @media (${tablets}) {
-    margin-top: 20px;
-    height: 400ox;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  @media (${tablets}) and (orientation: portrait) {
     width: 100%;
+    margin: auto;
   }
-  @media (${phones}) {
-    margin-top: 20px;
-    height: 300ox;
-  }
-  @media (${smallPhones}) {
-    margin-top: 20px;
-    height: 200px;
+  @media (${phones}) and (orientation: portrait) {
+    width: 100%;
+    margin: auto;
   }
 `;
 
 const FindUsGrid = styled.div`
-  display: grid;
-  grid-template-columns: auto 600px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-between;
   h1 {
     color: ${accent};
     font-family: typewcond;
@@ -49,19 +72,16 @@ const FindUsGrid = styled.div`
     text-align: left;
   }
   @media (${tablets}) and (orientation: portrait) {
-    grid-template-columns: auto;
     h1 {
       text-align: center;
     }
     p {
       font-size: 1.3em;
 
-      pxmargin-right: 10px;
       text-align: center;
     }
   }
   @media (${phones}) and (orientation: portrait) {
-    grid-template-columns: auto;
     text-align: center;
     h1 {
       text-align: center;
@@ -74,7 +94,6 @@ const FindUsGrid = styled.div`
     }
   }
   @media (${smallPhones}) {
-    grid-template-columns: auto;
   }
 `;
 
@@ -92,32 +111,21 @@ export const FindUs = () => {
       <Wrapper>
         <SubTitle>Find Us</SubTitle>
         <FindUsGrid>
-          <div>
+          <ContentDiv>
             <div
               style={{
                 margin: "auto",
-                textAlign: "justify"
+                textAlign: "left",
+                flexBasis: "100%"
               }}
             >
-              <h1>LOCATION</h1>
+              <h1 style={{ fontWeight: "100" }}>Location</h1>
+              <Divider></Divider>
               <p>5100 Rutherford Road</p>
               <p>Woodbridge, Ontario </p>
               <p>L4H 2J2</p>
             </div>
-
-            <div style={{ margin: "auto" }}>
-              <h1 style={{ marginTop: "30px" }}>HOURS</h1>
-              <p>Monday - Thursday: 12pm - 3pm, 5pm - 10pm</p>
-              <p>Friday - Saturday: 12pm - 3pm, 5pm - 11pm</p>
-              <p>Sunday: Private Events</p>
-            </div>
-
-            <div style={{ margin: "auto" }}>
-              <h1 style={{ marginTop: "30px" }}>RESERVATIONS</h1>
-              <p>Call: (905) 893 2774</p>
-              <p>Email: info@artiristorante.com</p>
-            </div>
-          </div>
+          </ContentDiv>
 
           <MapDiv>
             <GoogleMapReact

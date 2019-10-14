@@ -3,17 +3,6 @@ import { SubTitle, Wrapper, Frame } from "../shared/styledComponents";
 import Styled from "styled-components";
 import { Icon } from "semantic-ui-react";
 
-const SocialIcon = Styled(Icon)`
-
-  &&{
- 
-    background-color: green;
-  }
- 
-  color: #fff;
- 
-`;
-
 export const Social = () => {
   return (
     <Frame id="social">

@@ -2,7 +2,6 @@ import React from "react";
 
 import { Nav } from "./components/Nav";
 import { Menu } from "./components/Menu";
-import { Location } from "./components/Location";
 import { Landing } from "./components/Landing";
 import { Social } from "./components/Social";
 import { Footer } from "./components/Footer";
@@ -11,6 +10,7 @@ import { NavHashLink as NavLink } from "react-router-hash-link";
 import Styled from "styled-components";
 import { FindUs } from "./components/FindUs";
 import { Helmet } from "react-helmet";
+import { Hours } from "./components/Hours";
 
 const StyledLink = Styled(NavLink)`
   font-family: typewcond;
@@ -33,7 +33,7 @@ function App() {
         <title>Artigianale Ristorante & Enotoca</title>
         <meta
           name="description"
-          content="Traditional italian restaurante Woodbridge Ontario"
+          content="Traditional Italian Restaurant located in Woodbridge, Ontario."
         />
         <meta
           name="keywords"
@@ -41,6 +41,14 @@ function App() {
         />
       </Helmet>
       <Nav tabs={["menu", "location", "contact", "social"]}>
+        <StyledLink
+          to="#hours"
+          className="StyledLink"
+          activeClassName="selected"
+          scroll={el => el.scrollIntoView({ behavior: "smooth" })}
+        >
+          HOURS
+        </StyledLink>
         <StyledLink
           to="#menu"
           className="StyledLink"
@@ -68,8 +76,11 @@ function App() {
       </Nav>
 
       <Landing style={{ zIndex: "-1" }}></Landing>
+
+      <Hours></Hours>
       <Menu></Menu>
       <FindUs></FindUs>
+      {/* <Reservations></Reservations> */}
       <Social></Social>
       <Footer></Footer>
     </BrowserRouter>

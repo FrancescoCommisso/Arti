@@ -1,20 +1,16 @@
 import styled from "styled-components";
 
 export const smallPhones = "max-width: 361px";
+
 export const phones = "max-width: 415px";
 export const tablets = "max-width: 1024px";
 
 export const background = "#191919";
-export const accent = "#c69c6c";
+export let accent = "#c69c6c";
+export const lightAccent = "#FFCB8F";
+
 export const textColor = "#fff";
 export const subTitleColor = "#000";
-
-const darkTheme = {
-  background,
-  accent,
-  textColor,
-  subTitleColor
-};
 
 export const Title = styled.h1`
   font-size: 4em;
@@ -59,18 +55,23 @@ export const Frame = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  margin: 20px;
-  overflow: auto;
+  margin: auto;
   width: 85vw;
   @media (${tablets}) {
+    padding-top: 20px;
+
     text-align: center;
     width: 85vw;
   }
   @media (${phones}) {
+    padding-top: 20px;
+
     text-align: center;
     width: 85vw;
   }
   @media (${smallPhones}) {
+    margin-top: 20px;
+
     text-align: center;
     width: 85vw;
   }

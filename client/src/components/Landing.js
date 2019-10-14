@@ -17,13 +17,15 @@ import p6 from "./assets/photosMin2/saladplate.jpg";
 import p7 from "./assets/photosMin2/sidepasta.jpg";
 // import p8 from "./assets/photos2/warmsalad.jpg";
 
-import { Placeholder } from "semantic-ui-react";
+import { Placeholder, Button } from "semantic-ui-react";
+import { Buttons } from "./Buttons";
+import { ContactButtons } from "./ContactButtons";
 
 const photos = [p1, p2, p3, p4, p5, p6, p7];
 
 const StyledCarousel = styled(Carousel)`
 display: ${({ hide }) => hide}
-  max-height: 95vh;
+  max-height: 100vh;
   div {
     img {
     }
@@ -147,9 +149,6 @@ export const Landing = () => {
           );
         })}
       </StyledCarousel>
-      <Banner>
-        <h1>Come join us during our soft opening</h1>
-      </Banner>
     </div>
   );
 };

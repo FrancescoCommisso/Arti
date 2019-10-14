@@ -57,15 +57,15 @@ const Item = styled.div`
   }
 
   @media (${tablets}) {
-    text-align: center;
+    text-align: left;
     font-size: 1em;
   }
   @media (${phones}) {
-    text-align: center;
+    text-align: left;
     font-size: 1em;
   }
   @media (${smallPhones}) {
-    text-align: center;
+    text-align: left;
     font-size: 1em;
   }
 `;
