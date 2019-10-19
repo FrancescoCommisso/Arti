@@ -244,8 +244,8 @@ const MenuItem = ({ item, align }) => {
       >
         <MenuItemTitle>{item.title}</MenuItemTitle>
         <div>
-          {/* <Dimmer active={blurred}>  uncomment and delete <Dimmer below to add dimmer back */}
-          <Dimmer active={""}>
+          <Dimmer active={blurred}>
+            {/* // <Dimmer active={""}> */}
             <p style={{ fontFamily: "typewcond" }}>
               This item isn't available during our soft opening
             </p>

@@ -37,13 +37,13 @@ export const fullMenu = [
 
   {
     title: "Amaro",
-    active: true,
+    active: false,
     desc: "bitter lettuces, lemon amaro vinaigrette"
   },
 
   {
     title: "Caesar",
-    active: false,
+    active: true,
     desc:
       "Romaine Lettuce, house caesar dressing, parmigiano, prosciutto crisps, house made croutons"
   },
@@ -114,7 +114,7 @@ export const fullMenu = [
   },
   {
     title: "Patate",
-    active: false,
+    active: true,
     desc: "Potatoes, Roasted Pork Jowl, Caramelized onions"
   },
   {
@@ -249,13 +249,13 @@ export const antipasto = [
 export const insalata = [
   {
     title: "Amaro",
-    active: true,
+    active: false,
     desc: "bitter lettuces, lemon amaro vinaigrette"
   },
 
   {
     title: "Caesar",
-    active: false,
+    active: true,
     desc:
       "Romaine Lettuce, house caesar dressing, parmigiano, prosciutto crisps, house made croutons"
   },
@@ -331,7 +331,7 @@ export const pizza = [
   },
   {
     title: "Patate",
-    active: false,
+    active: true,
     desc: "Potatoes, Roasted Pork Jowl, Caramelized onions"
   },
   {
