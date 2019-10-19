@@ -1,7 +1,29 @@
 import React from "react";
-import { SubTitle, Wrapper, Frame } from "../shared/styledComponents";
-import Styled from "styled-components";
+import {
+  SubTitle,
+  Wrapper,
+  Frame,
+  lightAccent
+} from "../shared/styledComponents";
+import styled from "styled-components";
 import { Icon } from "semantic-ui-react";
+
+const SocialIcon = styled(Icon)`
+  margin: 20px;
+
+  &&& {
+    :hover {
+      color: ${lightAccent};
+    }
+  }
+`;
+
+// const SocialIcon = Styled(Icon)`
+//   margin: 20px;
+// :hover{
+//   color: ${lightAccent};
+// }
+// `;
 
 export const Social = () => {
   return (
@@ -18,10 +40,7 @@ export const Social = () => {
           }}
         >
           <a href="https://www.instagram.com/arti.ristorante">
-            <Icon
-              style={{ margin: "20px" }}
-              className="instagram huge black"
-            ></Icon>
+            <SocialIcon className="instagram black huge "></SocialIcon>
           </a>
           <h3 style={{ fontFamily: "typewcond" }}>@Arti.Ristorante</h3>
         </div>

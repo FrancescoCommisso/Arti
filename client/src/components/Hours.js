@@ -83,6 +83,13 @@ const StyledSub = styled(SubTitle)`
   }
 `;
 
+const StyledLink = styled.a`
+  color: white;
+  :hover {
+    color: ${lightAccent};
+  }
+`;
+
 export const Hours = () => {
   return (
     <Frame id="hours" href="/hours">
@@ -102,11 +109,21 @@ export const Hours = () => {
             ></InfoItem>
             <InfoItem
               align={"left"}
-              title={"Friday and Saturday"}
+              title={"Friday"}
               info={
                 <div>
-                  <p>Lunch: {hours.fridaySaturday.lunch}</p>
-                  <p>Dinner: {hours.fridaySaturday.dinner}</p>
+                  <p>Lunch: {hours.friday.lunch}</p>
+                  <p>Dinner: {hours.friday.dinner}</p>
+                </div>
+              }
+            ></InfoItem>
+            <InfoItem
+              align={"left"}
+              title={"Saturday"}
+              info={
+                <div>
+                  <p></p>
+                  <p>Dinner: {hours.saturday.dinner}</p>
                 </div>
               }
             ></InfoItem>
@@ -128,11 +145,15 @@ export const Hours = () => {
               info={
                 <div>
                   <div>
-                    <p>{`Phone: ${phone}`} </p>
+                    <StyledLink href={"tel:9058932774"}>
+                      <p>{`Phone: ${phone}`} </p>
+                    </StyledLink>
                   </div>
 
                   <div>
-                    <p> {`Email: ${email}`} </p>
+                    <StyledLink href={"mailto: Info@Artiristorante.com"}>
+                      <p> {`Email: ${email}`} </p>
+                    </StyledLink>
                   </div>
                   <div>
                     <p>

@@ -244,7 +244,8 @@ const MenuItem = ({ item, align }) => {
       >
         <MenuItemTitle>{item.title}</MenuItemTitle>
         <div>
-          <Dimmer active={blurred}>
+          {/* <Dimmer active={blurred}>  uncomment and delete <Dimmer below to add dimmer back */}
+          <Dimmer active={""}>
             <p style={{ fontFamily: "typewcond" }}>
               This item isn't available during our soft opening
             </p>
@@ -264,7 +265,15 @@ export const Menu = () => {
     <Frame id="menu" href="/menu">
       <Wrapper>
         <SubTitle>Menu</SubTitle>
-
+        <p
+          style={{
+            color: accent,
+            fontFamily: "typewcond",
+            textAlign: "center"
+          }}
+        >
+          *Actual menu may vary
+        </p>
         <StyledTab>
           <Tab
             grid={{ paneWidth: 12, tabWidth: 4 }}

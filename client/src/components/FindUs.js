@@ -36,12 +36,13 @@ const MapDiv = styled.div`
 
 const ContentDiv = styled.div`
   border-radius: 4px;
-  text-align: center;
+  text-align: left;
   overflow: hidden;
   margin-right: 20px;
   margin-bottom: 20px;
 
   @media (${tablets}) and (orientation: portrait) {
+    text-align: center;
     width: 100%;
     margin: auto;
   }
