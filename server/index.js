@@ -18,6 +18,10 @@ app.get("/test", (req, res) => {
   res.send({ message: "This is a message from the server!" });
 });
 
+app.get("/menuitems", (req, res) => {
+  res.send(require("./menu"));
+});
+
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"), err => {
     if (err) {

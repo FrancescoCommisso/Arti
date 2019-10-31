@@ -11,6 +11,7 @@ import Styled from "styled-components";
 import { FindUs } from "./components/FindUs";
 import { Helmet } from "react-helmet";
 import { Hours } from "./components/Hours";
+import { MenuEdit } from "./components/MenuEdit";
 
 const StyledLink = Styled(NavLink)`
   font-family: typewcond;
@@ -40,7 +41,7 @@ function App() {
           content="italian, traditional,vaughan,artigianale,wine,winery,enoteca,pizza, pasta, steak"
         />
       </Helmet>
-      <Nav tabs={["menu", "location", "contact", "social"]}>
+      {/* <Nav tabs={["menu", "location", "contact", "social"]}>
         <StyledLink
           to="#hours"
           className="StyledLink"
@@ -73,15 +74,16 @@ function App() {
         >
           SOCIAL
         </StyledLink>
-      </Nav>
+      </Nav> */}
 
-      <Landing style={{ zIndex: "-1" }}></Landing>
+      {/* <Landing style={{ zIndex: "-1" }}></Landing>
 
       <Hours></Hours>
       <Menu></Menu>
       <FindUs></FindUs>
       <Social></Social>
-      <Footer></Footer>
+      <Footer></Footer> */}
+      <MenuEdit></MenuEdit>
     </BrowserRouter>
   );
 }
