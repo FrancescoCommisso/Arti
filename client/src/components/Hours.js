@@ -99,7 +99,7 @@ export const Hours = () => {
           <HoursGrid style={{ margin: "auto" }}>
             <InfoItem
               align={"left"}
-              title={"Monday to Thursday"}
+              title={"Tuesday to Thursday"}
               info={
                 <div>
                   <p> Lunch: {hours.mondayThursday.lunch}</p>
@@ -132,7 +132,7 @@ export const Hours = () => {
               title={"Sunday"}
               info={
                 <div>
-                  <p>Private Events Only</p>
+                  <p> Reservations Only</p>
                 </div>
               }
             ></InfoItem>
