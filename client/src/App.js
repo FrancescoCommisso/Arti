@@ -11,6 +11,7 @@ import Styled from "styled-components";
 import { FindUs } from "./components/FindUs";
 import { Helmet } from "react-helmet";
 import { Hours } from "./components/Hours";
+import { MenuBanner } from "./components/MenuBanner";
 
 const StyledLink = Styled(NavLink)`
   font-family: typewcond;
@@ -50,14 +51,6 @@ function App() {
           HOURS
         </StyledLink>
         <StyledLink
-          to="#menu"
-          className="StyledLink"
-          activeClassName="selected"
-          scroll={el => el.scrollIntoView({ behavior: "smooth" })}
-        >
-          MENU
-        </StyledLink>
-        <StyledLink
           to="/#find-us"
           activeClassName="selected"
           className="StyledLink"
@@ -76,9 +69,8 @@ function App() {
       </Nav>
 
       <Landing style={{ zIndex: "-1" }}></Landing>
-
+      {/* <MenuBanner></MenuBanner> */}
       <Hours></Hours>
-      <Menu></Menu>
       <FindUs></FindUs>
       <Social></Social>
       <Footer></Footer>
